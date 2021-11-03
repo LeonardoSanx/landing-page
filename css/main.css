@@ -1,0 +1,807 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  color: #1f1534;
+  text-decoration: none;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #7d7987;
+}
+
+button:hover {
+  transition: all 0.3s ease;
+}
+
+.clean-button {
+  background: white;
+  color: #458ff6;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 3rem 0;
+  height: 56px;
+  width: 200px;
+  border-radius: 40px;
+  border: solid #458ff6;
+  border-width: 1.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clean-button:hover {
+  background: #458ff6;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* ------------------- HEADER ----------------- */
+
+.navbar {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 999;
+}
+
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  background: white;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.circle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 38px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: #458ff6;
+}
+
+.circle p {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.logo h1 {
+  color: #233348;
+  font-size: 20px;
+}
+
+.navbar_menu {
+  display: grid;
+  opacity: 0;
+  grid-template-columns: auto;
+  position: absolute;
+  top: -1000%;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  background: white;
+  list-style: none;
+  transition: all 1s ease;
+  z-index: -1;
+}
+
+.navbar_menu.active {
+  display: grid;
+  opacity: 1;
+  top: 100%;
+  height: 60vh;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.navbar_list {
+  height: 80px;
+  width: 100%;
+}
+
+.highlight {
+  border-bottom: 4px solid #458ff6;
+}
+
+.navbar_links {
+  padding: 2rem;
+  display: table;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  background: white;
+}
+
+.navbar_links:hover {
+  color: #458ff6;
+  transition: all 0.3s ease;
+}
+
+#mobile-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transform: translate(5%, 20%);
+}
+
+.navbar_toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: black;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ------------------- SECTION-I --------#458FF6------------- */
+
+.section-i {
+  margin: 0.5rem 1.2rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.section-i img {
+  width: 100%;
+}
+
+.section-i h1 {
+  margin: 2rem 0 1.2rem;
+}
+
+.section-i button {
+  background: #458ff6;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 3rem 0;
+  height: 56px;
+  width: 200px;
+  border-radius: 40px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.section-i button:hover {
+  background: #233348;
+}
+
+/* ------------------- SERVICES --------#458FF6------------- */
+
+.services {
+  margin: 2.5rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.services h2 {
+  margin: 1.2rem 0 1rem;
+}
+
+.line {
+  background: black;
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  min-height: 0.1rem;
+  height: 2px;
+  width: 2.2rem;
+  border-radius: 10px;
+}
+
+/* ------------------- SECTION-II --------#458FF6------------- */
+.ii {
+  text-align: center;
+}
+
+.section-ii {
+  margin: 2.5rem 0.5rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-ii div {
+  background: white;
+  display: inline-block;
+  margin: 0.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-align: left;
+  padding: 2.5rem 1.5rem;
+  width: 13em;
+  height: 18em;
+  cursor: pointer;
+}
+
+.section-ii div:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-ii img {
+  height: 80px;
+  margin-bottom: 2rem;
+}
+
+.section-ii h3 {
+  margin-bottom: 0.5rem;
+}
+
+.section-ii p {
+  font-size: 0.75em;
+}
+
+/* ------------------- SECTION-III --------#458FF6------------- */
+
+.section-iii {
+  margin: 3rem 1.2rem;
+  text-align: center;
+}
+
+.section-iii img {
+  width: 100%;
+}
+
+.section-iii h2 {
+  margin: 2rem 0 1rem;
+}
+
+/* ------------------- SECTION-IV --------#458FF6------------- */
+
+.section-iv {
+  margin: 3rem 1.2rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.section-iv img {
+  width: 100%;
+}
+
+.section-iv h2 {
+  margin: 2rem 0 1rem;
+}
+
+/* ------------------- SECTION-V -------------------- */
+#testimonials {
+  padding-top: 5rem;
+}
+
+.section-v {
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(to top, #5a98f2, #67c3f3);
+  padding: 2rem 2rem;
+  margin: 3rem 0 3rem;
+}
+
+.section-v .line {
+  background: white;
+  margin: 1.5rem 0 1rem;
+}
+
+.person {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem 0;
+  justify-content: center;
+}
+
+.section-v img {
+  border: solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 8rem;
+  height: 8rem;
+  margin: 1rem;
+}
+
+.section-v h3 {
+  display: inline-block;
+  color: white;
+  align-self: center;
+}
+
+.section-v p {
+  text-indent: 1em;
+  font-size: 1em;
+  color: white;
+}
+
+/* ------------------- SECTION-VI -------------------- */
+
+.section-vi {
+  margin: 3rem 0;
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.section-vi h2 {
+  margin: 2rem 0 1rem;
+}
+
+.vi {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-vi .card {
+  display: inline-block;
+  background: white;
+  margin: 1rem 0.5rem;
+  padding: 0 1.5rem 1.5rem 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-align: left;
+  width: 16em;
+}
+
+.section-vi .card:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-vi img {
+  width: 16em;
+  height: 8rem;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.section-vi h3 {
+  margin: 1rem;
+  font-size: 15px;
+}
+
+.section-vi p {
+  margin: 1rem;
+  font-size: 0.75em;
+}
+
+.section-vi a {
+  margin: 1rem;
+  color: #458ff6;
+}
+
+.section-vi a:hover {
+  color: #233348;
+}
+
+/* ------------------- FOOTER -------------------- */
+
+.footer-container {
+  color: white;
+  background-image: linear-gradient(to top, #5a98f2, #67c3f3);
+  padding: 4rem 2rem;
+  margin: 3rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-container p {
+  color: white;
+}
+
+.footer-container a {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.trafalgar-footer {
+  display: block;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.t-circle {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.t-circle p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #458ff6;
+}
+
+.trafalgar-footer h1 {
+  font-size: 20px;
+  color: white;
+  display: inline-flex;
+  margin-left: 0.5rem;
+}
+
+.links-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards-footer {
+  margin: 2rem 1rem 0;
+  text-align: left;
+}
+
+.cards-footer h2 {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.cards-footer li {
+  list-style: none;
+  line-height: 0.5rem;
+}
+
+.cards-footer a {
+  color: white;
+  display: block;
+}
+
+.cards-footer a:hover {
+  cursor: pointer;
+  color: #233348;
+}
+
+/* ------------------------------------------------ 
+---------------------- > 730px --------------------
+--------------------------------------------------- */
+
+@media screen and (min-width: 730px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  /* ------------------- SECTION-I ------------------- */
+
+  .section-i {
+    margin: 0.5rem 4rem 4rem 4rem;
+    text-align: left;
+  }
+  /* ------------------- SERVICES ------------------- */
+
+  .services {
+    margin: 4rem;
+  }
+  /* ------------------- SECTION-II ------------------- */
+
+  .section-ii {
+    margin: 2.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 15em);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .section-ii div {
+    background: white;
+    display: inline-block;
+    margin: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: left;
+    padding: 2.5rem 1.5rem;
+    width: 14em;
+    height: 18em;
+    cursor: pointer;
+  }
+
+  .section-ii div:hover {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .section-ii img {
+    height: 80px;
+    margin-bottom: 2rem;
+  }
+
+  .section-ii h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-ii p {
+    font-size: 0.75em;
+  }
+
+  /* ------------------- SECTION-III ------------------- */
+
+  .section-iii {
+    margin: 3rem 4rem 4rem 4rem;
+    text-align: left;
+  }
+
+  /* ------------------- SECTION-IV ------------------- */
+
+  .section-iv {
+    margin: 4rem;
+    text-align: left;
+  }
+
+  /* ------------------- SECTION-V ------------------- */
+
+  .section-v {
+    padding: 2rem 1rem;
+  }
+
+  .azul-v {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: auto;
+  }
+  s .person {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: left;
+  }
+
+  .person img {
+    margin: 0 1rem 0 0;
+  }
+
+  .azul-v p {
+    align-self: center;
+    text-align: left;
+  }
+
+  /* ------------------- FOOTER ------------------- */
+
+  .t-circle {
+    height: 41px;
+    width: 41px;
+  }
+
+  .t-circle p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #458ff6;
+  }
+
+  .trafalgar-footer h1 {
+    font-size: 24px;
+  }
+}
+
+/* ------------------------------------------------ 
+---------------------- > 1000px --------------------
+--------------------------------------------------- */
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  /* ------------------- HEADER------------- */
+
+  #mobile-menu {
+    display: none;
+  }
+
+  .circle {
+    height: 41px;
+    width: 41px;
+  }
+
+  .circle p {
+    font-size: 26px;
+  }
+
+  .navbar_container h1 {
+    font-size: 24px;
+  }
+
+  .navbar_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    background: white;
+  }
+
+  .navbar_menu {
+    display: flex;
+    opacity: 1;
+    list-style: none;
+    position: initial;
+    margin: initial;
+    align-items: center;
+    justify-content: center;
+    width: initial;
+    height: initial;
+    font-size: 1em;
+    z-index: 1;
+  }
+
+  .navbar_menu.active {
+    display: flex;
+    opacity: 1;
+    list-style: none;
+    position: initial;
+    margin: initial;
+    align-items: center;
+    justify-content: center;
+    width: initial;
+    height: initial;
+    font-size: 1em;
+    z-index: 1;
+  }
+
+  .navbar_list {
+    height: 80px;
+    background: white;
+  }
+
+  .navbar_links {
+    display: flex;
+    height: 100%;
+    background: white;
+    justify-content: center;
+    padding: 0;
+    width: 125px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar_links:hover {
+    color: #458ff6;
+    transition: all 0.3s ease;
+  }
+
+  /* ------------------- SECTION-I --------#458FF6------------- */
+
+  .section-i {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "text-i image-i";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .i-esquerda {
+    grid-area: text-i;
+    width: 28rem;
+  }
+
+  .section-i img {
+    grid-area: image-i;
+    margin: 0 12rem;
+  }
+
+  /* ------------------- SECTION-III --------#458FF6------------- */
+
+  .section-iii {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .iii-direita {
+    width: 22rem;
+    margin-left: 4rem;
+  }
+
+  /* ------------------- SECTION-IV --------#458FF6------------- */
+
+  .section-iv {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "text-iv image-iv";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .iv-esquerda {
+    grid-area: text-iv;
+    width: 22rem;
+  }
+
+  .section-iv img {
+    grid-area: image-iv;
+  }
+
+  /* ------------------- SECTION-V --------#458FF6------------- */
+
+  .section-v {
+    margin: 3rem auto;
+    border-radius: 20px;
+    width: 55rem;
+  }
+
+  /* ------------------- FOOTER ------------------- */
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 1rem 0 0;
+    padding: 4rem 2rem;
+    justify-items: center;
+    text-align: left;
+  }
+
+  .cards-footer {
+    margin: 0 1rem;
+  }
+}
